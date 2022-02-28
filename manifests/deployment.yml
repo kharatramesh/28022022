@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: boschazurecriovadapav 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: boschazurecriovadapav
+  template:
+    metadata:
+      labels:
+        app: boschazurecriovadapav 
+    spec:
+      containers:
+        - name: boschazurecriovadapav 
+          image: bosch.azurecr.io/boschazurecriovadapav
+          ports:
+          - containerPort: 80
