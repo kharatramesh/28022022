@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: boschazurecriodocker1vadapav 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: boschazurecriodocker1vadapav
+  template:
+    metadata:
+      labels:
+        app: boschazurecriodocker1vadapav 
+    spec:
+      containers:
+        - name: boschazurecriodocker1vadapav 
+          image: bosch.azurecr.io/boschazurecriodocker1vadapav
+          ports:
+          - containerPort: 80
